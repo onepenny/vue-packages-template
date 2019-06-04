@@ -1,0 +1,349 @@
+@import './reset.less';
+@import './basic.less';
+@import './basicTable.less';
+@import './basicForm.less';
+@import './customModal.less';
+@import './transition.less';
+@import './fonts/iconfont.css';
+
+.add-img-btn{
+	position: relative;
+	width: 100px;
+	height: 100px;
+	display: inline-block;
+	border: 1px solid #dddee1;
+	background-color: #f7f7f7;
+	border-radius: 4px;
+	cursor: pointer;
+	vertical-align: top;
+	transition: all 0.3s ease;
+	&:before{
+		content: '\F489';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		font-family: Ionicons;
+		font-size: 46px;
+		color: #bbbec4;
+	}
+	&:hover{
+		background-color: transparent;
+		border-color: #8C8C8C;
+		transition: all 0.3s ease, color 1s;
+	}
+}
+
+// 图片 画廊
+.pic-gallery-wrapper{
+	@size: 100px;
+	.pic-gallery-list{
+		font-size: 0;
+		white-space: initial;
+	}
+	.pic-gallery-li{
+		display: inline-block;
+		vertical-align: top;
+		margin-right: 10px;
+		&:last-child{
+			margin-right: 0;
+		}
+	}
+	.pic-box{
+		position: relative;
+		width: @size;
+		height: @size;
+		border:1px solid #dddee1;
+		border-radius: 4px;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		.pic-operat{
+			position: absolute;
+			z-index: 2;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			height: 24px;
+			background-color: rgba(0, 0, 0, 0.5);
+			border-radius: 0 0 4px 4px;
+			display: flex;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease;
+			.operat-btn{
+				flex: 1;
+				display: inline-block;
+				color: #fff;
+				line-height: 24px;
+				text-align: center;
+				position: relative;
+				font-size: 12px;
+				&:after{
+					content: '';
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 1px;
+					height: 100%;
+					background-color: #e9eaec;
+				}
+				&:last-child{
+					&:after{
+						display: none;
+					}
+				}
+				.fs-10{
+					display: inline-block;
+					font-size: 12px;
+					transform: scale(0.8);
+				}
+			}
+		}
+		.pic-del{
+			position: absolute;
+			z-index: 2;
+			top: 6px;
+			right: 6px;
+			font-size: 16px;
+			color: #8C8C8C;
+			cursor: pointer;
+			opacity: 0;
+			visibility: hidden;
+			transition: all 0.3s ease;
+		}
+		.pic-badge{
+			position: absolute;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			width: 100%;
+			height: 100%;
+			border-radius: 4px;
+			overflow: hidden;
+			.pic-badge-bd{
+				position: absolute;
+				top: -30px;
+				left: -30px;
+				width: 60px;
+				height: 60px;
+				background-color: rgba(0, 0, 0, 0.8);
+				text-align: center;
+				transform: rotate(-45deg);
+				.pic-badge-text{
+					position: absolute;
+					bottom: 0;
+					left: 0;
+					width: 100%;
+					line-height: 20px;
+					display: inline-block;
+					font-size: 12px;
+					color: #fff;
+					transform: scale(0.8);
+				}
+			}
+		}
+		&:hover{
+			.pic-operat, .pic-del{
+				opacity: 1;
+				visibility: visible;
+				transition: all 0.3s ease;
+			}
+		}
+	}
+	.pic-text{
+		position: relative;
+		color: #262626;
+		width: @size;
+		line-height: 18px;
+		padding-top: 5px;
+		.title{
+			font-size: 12px;
+		}
+		.fill{
+			display: inline-block;
+			min-width: 20px;
+			color: #fff;
+			font-size: 12px;
+			text-align: center;
+			transform: scale(0.9);
+			padding: 0 2px;
+			border-radius: 3px;
+		}
+		.fs12{
+			font-size: 12px;
+		}
+	}
+	&.horizontal{
+		.pic-gallery-item{
+			display: flex;
+		}
+		.pic-text{
+			flex: 1;
+			padding-left: 6px;
+			padding-top: 0;
+		}
+		.position-bottom{
+			position: absolute;
+			bottom: 0;
+		}
+	}
+}
+
+// steps
+.lt-steps-wrapper{
+	display: flex;
+	align-items: center;
+	min-height: 120px;
+	.lt-steps-list{
+		font-size: 0;
+		display: flex;
+		align-items: center;
+		flex: 1;
+		margin-right: 100px;
+		margin-left: 100px;
+		.lt-steps-item{
+			position: relative;
+			text-align: right;
+			vertical-align: top;
+			.head{
+				position: absolute;
+				top: -30px;
+				right: 9px;
+				transform: translate(50%, 0);
+				min-width: 100px;
+				text-align: center;
+				font-size: 14px;
+				color: #4d4d4d;
+			}
+			.dot{
+				position: relative;
+				z-index: 2;
+				display: inline-block;
+				width: 12px;
+				height: 12px;
+				border-radius: 50%;
+				background-color: #D8D8D8;
+			}
+			.time{
+				position: absolute;
+				top: 30px;
+				right: 9px;
+				transform: translate(50%, 0);
+				min-width: 140px;
+				text-align: center;
+				font-size: 12px;
+				color: #848484;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				top: 50%;
+				right: 0;
+				width: 100%;
+				height: 1px;
+				background-color: #D8D8D8;
+				transform: translate(0, -50%);
+      }
+			&:first-child{
+        width: 18px;
+        &:after{
+          display: none;
+        }
+			}
+			&:not(:first-child){
+				flex: 1;
+			}
+			&.checked{
+				&:after{
+					background-color: #EC725B;
+				}
+				.dot{
+					width: 18px;
+					height: 18px;
+					background-color: #EC725B;
+					border:3px solid #fff;
+					&:before{
+						content: '';
+						position: absolute;
+						top: -3px;
+						left: -3px;
+						width: 18px;
+						height: 18px;
+						border: 1px solid #EC725B;
+						border-radius: 50%;
+					}
+				}
+			}
+			&:last-child{
+				&.checked{
+					.dot{
+						border: none;
+						text-align: center;
+						&:before{
+							display: none;
+						}
+						&:after{
+							content: "\F122";
+							font-family: Ionicons;
+							display: inline-block;
+							color: #fff;
+							font-size: 12px;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 物流 轴
+.lt-delivery-wrapper{
+  white-space: initial;
+	.lt-delivery-list{
+		.lt-delivery-item{
+			position: relative;
+			padding: 6px 6px 6px 18px;
+			font-size: 13px;
+			color: #848484;
+			line-height: 18px;
+			// text-overflow: ellipsis;
+			// white-space: nowrap;
+			// overflow: hidden;
+			_zoom: 1;
+			&:before{
+				content: '';
+				position: absolute;
+				top: 21px;
+				left: 3px;
+				width: 1px;
+				height: calc(~'100% - 13px');
+				background-color: #e0e0e0;
+			}
+			&:after{
+				content: '';
+				position: absolute;
+				top: 11px;
+				left: 0;
+				width: 7px;
+				height: 7px;
+				border-radius: 7px;
+				background-color: #e0e0e0;
+			}
+			&:last-child{
+				&:before{
+					display: none;
+				}
+			}
+			&.checked{
+				&:before{
+					background-color: #EC725B;
+				}
+				&:after{
+					background-color: #EC725B;
+				}
+
+			}
+		}
+	}
+}

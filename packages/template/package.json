@@ -1,0 +1,15 @@
+{
+  "name": "template",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {},
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "lt-xhr": "0.0.1",
+    "lt-router": "0.0.1",
+    "lt-utils": "0.0.1",
+    "lt-component": "0.0.1"
+  }
+}

@@ -1,0 +1,199 @@
+body{
+	background-color: #fafafa;
+}
+
+div:focus{ outline: none }
+
+.center{ text-align: center }
+.ta-rt{ text-align: right }
+
+.bold{
+	font-weight: bold;
+}
+
+.clearfix {
+	&:after {
+		visibility: hidden;
+		display: block;
+		font-size: 0;
+		content: " ";
+		clear: both;
+		height: 0;
+	}
+}
+
+.pointer{
+	cursor: pointer;
+}
+
+// a
+a{
+	color: #1989FA;
+	cursor: pointer;
+	text-decoration: none;
+}
+a:hover{
+	color: #5cadff;
+}
+a:focus,
+a:active {
+	text-decoration: none;
+	outline: none;
+}
+
+// float
+.fr { float: right }
+.fl { float: left }
+
+// block
+.db { display: block }
+.db-i { display: block!important }
+.dib{ display: inline-block }
+.dib-i{ display: inline-block!important }
+.di { display: inline }
+.dn{ display: none }
+
+// color
+.blue{ color: #1989FA }
+.blue-light{ color: #5cadff }
+.blue-dark{ color: #2b85e4 }
+.black{ color: #515a6e }
+.black-dark{ color: #17233d }
+.black-light{ color: #808695 }
+.black-disabled{ color: #c5c8ce }
+.red, .error{ color: #ed4014 }
+.yellow{ color: #ff9900 }
+.green{ color: #19be6b }
+
+// bgcolor
+
+// margin 边距
+.mt{ margin-top: 10px }
+.mt-small{ margin-top: 5px }
+.mt-large{ margin-top: 15px }
+.mt-none{ margin-top: 0 }
+.mt-20{
+	margin-top: 20px;
+}
+
+.mr{ margin-right: 10px }
+.mr-small{ margin-right: 5px }
+.mr-large{ margin-right: 15px }
+.mr-none{ margin-right: 0 }
+
+.mb{ margin-bottom: 10px }
+.mb-small{ margin-bottom: 5px }
+.mb-large{ margin-bottom: 15px }
+.mb-none{ margin-bottom: 0 }
+
+.ml{ margin-left: 10px }
+.ml-2 {
+  margin-left: 2px;
+}
+.ml-small{ margin-left: 5px }
+.ml-large{ margin-left: 15px }
+.ml-none{ margin-left: 0 }
+.ml-20 {
+  margin-left: 20px;
+}
+
+.m-none{ margin: 0 }
+
+// padding 边距
+.pt{ padding-top: 10px }
+.pt-small{ padding-top: 5px }
+.pt-large{ padding-top: 15px }
+.pt-none{ padding-top: 0 }
+
+.pr{ padding-right: 10px }
+.pr-small{ padding-right: 5px }
+.pr-large{ padding-right: 15px }
+.pr-none{ padding-right: 0 }
+
+.pb{ padding-bottom: 10px }
+.pb-small{ padding-bottom: 5px }
+.pb-large{ padding-bottom: 15px }
+.pb-none{ padding-bottom: 0 }
+
+.pl{ padding-left: 10px }
+.pl-small{ padding-left: 5px }
+.pl-large{ padding-left: 15px }
+.pl-none{ padding-left: 0 }
+
+.p-none{ margin: 0 }
+
+// width
+.w60{
+	width: 60px;
+}
+.w80{
+	width: 80px;
+}
+.w100{
+	width: 100px;
+}
+.w120{
+	width: 120px;
+}
+.w140{
+	width: 140px;
+}
+.w160{
+	width: 160px;
+}
+.w200{
+	width: 200px;
+}
+.w300{
+	width: 300px;
+}
+.w-fill{
+	width: 100%;
+}
+
+// 日期时间选择 宽度
+.w-date{
+	width: 140px;
+}
+.w-date-time{
+	width: 180px;
+}
+.w-date-range{
+	width: 210px;
+}
+.w-date-time-range{
+	width: 270px;
+}
+
+.ellipse {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.ellipse2{
+	word-break: break-all;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 2;
+	overflow: hidden;
+}
+
+.item-container {
+  &:hover {
+    .del-icon {
+      display: block;
+    }
+  }
+  .del-icon {
+    position:absolute;
+    float: right;
+    display: none;
+    right: 0.2rem;
+    top: 0.2rem;
+    cursor: pointer;
+    color: #727272;
+  }
+
+}

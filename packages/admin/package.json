@@ -1,0 +1,25 @@
+{
+  "name": "admin",
+  "version": "0.0.1",
+  "description": "",
+  "main": "src/main.js",
+  "scripts": {},
+  "keywords": [],
+  "license": "MIT",
+  "dependencies": {
+    "@tinymce/tinymce-vue": "^1.0.7",
+    "cascader-multi": "^2.0.3",
+    "echarts": "^4.2.1",
+    "element-ui": "^2.7.2",
+    "image-compressor.js": "^1.1.4",
+    "iview": "^3.3.3",
+    "jszip": "^3.2.1",
+    "lt-component": "0.0.1",
+    "lt-i18n": "0.0.1",
+    "lt-router": "0.0.1",
+    "lt-utils": "0.0.1",
+    "lt-xhr": "0.0.1",
+    "tinymce": "^4.7.13",
+    "vuedraggable": "^2.20.0"
+  }
+}

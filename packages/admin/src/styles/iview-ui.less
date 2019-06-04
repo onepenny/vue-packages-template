@@ -1,0 +1,94 @@
+@primary-color: #262626;
+
+// 表单 重置
+.ivu-btn-primary {
+	background-color: #595959;
+	border-color: #595959;
+}
+.ivu-btn-primary:hover {
+	background-color: #595959;
+	border-color: #595959;
+}
+.ivu-btn-small {
+	padding: 5px 7px;
+}
+
+.ivu-input-wrapper{
+	&.pointer{
+		.ivu-input{
+			cursor: pointer;
+		}
+	}
+}
+.ivu-select-dropdown{
+	font-size: 12px;
+}
+
+.ivu-menu-vertical.ivu-menu-light:after{
+	display: none;
+}
+.ivu-menu-light.ivu-menu-vertical .ivu-menu-item{
+	border-right: none;
+}
+
+// table 重置
+.ivu-table{
+	&:before, &:after{
+		display: none;
+	}
+}
+.ivu-table-wrapper{
+	border: none;
+}
+.ivu-table-border th{
+	border-right: none;
+}
+
+// switch 重置
+.ivu-switch-large{
+	width: 70px;
+}
+.ivu-switch-large.ivu-switch-checked:after{
+	left: 47px;
+}
+
+.ivu-modal{
+	top: 15vh;
+	margin-bottom: 15vh;
+	.ivu-modal-content{
+		box-shadow:0px 0px 10px 0px #bbbec4;
+	}
+}
+.ivu-modal-wrap{
+	&.second-layer{
+		z-index: 1002;
+	}
+	&.third-layer{
+		z-index: 1003;
+	}
+	&.vertical-center{
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		.ivu-modal{
+			top: 0;
+		}
+	}
+	&.no-footer{
+		.ivu-modal-footer{
+			display: none;
+		}
+	}
+}
+
+.hide-error-tip{
+	.ivu-form-item-error-tip{
+		display: none;
+	}
+}
+
+.ivu-modal-visible-footer{
+	.ivu-modal-footer{
+		display: none;
+	}
+}

@@ -1,0 +1,230 @@
+.header-container{
+	position: relative;
+	font-size: 16px;
+	color: #495060;
+	line-height: 50px;
+	margin-bottom: 20px;
+	&:after{
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		border-bottom: 1px solid #efefef;
+	}
+	&.no-brd{
+		&:after{
+			display: none;
+		}
+	}
+	&.small{
+		font-size: 14px;
+		line-height: 30px;
+	}
+	.ivu-menu{
+		height: 50px;
+		line-height: 50px;
+	}
+}
+
+// table筛选区域样式
+.filter-container {
+	overflow: hidden;
+	padding: 20px 10px;
+	font-size: 0;
+	.filter-item {
+		display: inline-block;
+		vertical-align: top;
+    margin-right: 20px;
+    margin-bottom: 20px;
+		label{
+			color: #666;
+			font-size: 12px;
+			display: inline-block;
+			line-height: 32px;
+			vertical-align: top;
+			//min-width: 70px;
+      margin-right: 10px;
+		}
+	}
+	.left{
+		float: left;
+	}
+	.right{
+		float: right;
+	}
+}
+
+// table 内容层
+.table-container{
+	width: 100%;
+	overflow: hidden;
+	table{
+		width: inherit;
+		border: 0;
+		margin: 0;
+		// border-collapse: collapse;
+		border-spacing: 0;
+		&.w-fill{
+			width: 100%;
+		}
+	}
+	&.overflow-initial{
+		.ivu-table-fixed-body{
+			overflow: initial;
+		}
+	}
+	.ivu-table{
+		.operation{
+			padding-top: 12px;
+			padding-bottom: 12px;
+			a{
+				font-size: 12px;
+				line-height: 24px;
+				&:not(:last-child)::after{
+					content: '';
+					display: block;
+				}
+				&.red{
+					color: #FE6859;
+				}
+        &.grey{
+          color: grey;
+        }
+				&.disabled{
+					color: #bbbec4;
+					cursor: not-allowed;
+				}
+			}
+		}
+		.img-wrapper{
+			position: relative;
+			display: flex;
+			margin: 10px 0;
+			img{
+				max-height: 100px;
+				display: inline-block;
+			}
+			.img-box{
+				position: relative;
+				width: 100px;
+				height: 100px;
+				display: inline-block;
+				border: 1px solid #e9eaec;
+				border-radius: 3px;
+				background-position: center;
+				background-repeat: no-repeat;
+				background-size: contain;
+				// background-image: url('');
+				overflow: hidden;
+				>div{
+					width: 100%;
+					height: 100%;
+					background-position: center;
+					background-repeat: no-repeat;
+					background-size: contain;
+				}
+			}
+
+			.img-text{
+				flex: 1;
+				position: relative;
+				display: inline-block;
+				padding-left: 10px;
+				.light{
+					color: #848484;
+				}
+				.bottom{
+					position: absolute;
+					bottom: 0;
+				}
+			}
+			&.vertical-center{
+				align-items: center;
+			}
+		}
+
+    .preview-panel-list-img-wrapper {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin: 10px 0;
+      justify-content: center;
+      align-items: center;
+      img{
+        max-height: 100px;
+        display: inline-block;
+      }
+      .img-box{
+        position: relative;
+        width: 120px;
+        height: 60px;
+        display: inline-block;
+        border-radius: 3px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        overflow: hidden;
+        border: none;
+        flex-direction: column;
+        text-align: center;
+        >div{
+          width: 100%;
+          height: 100%;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+
+      .img-text{
+        flex: 1;
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        .light{
+          color: #848484;
+        }
+        .bottom{
+          position: absolute;
+          bottom: 0;
+        }
+      }
+      &.vertical-center{
+        align-items: center;
+      }
+    }
+		.ivu-checkbox-wrapper{
+			margin: 0;
+		}
+	}
+}
+
+.fixed-body {
+  .ivu-table-body {
+    height: 290px;
+    overflow: auto;
+  }
+}
+
+
+
+// 不显示表格头第一个checkbox
+thead {
+  .ivu-checkbox-inner {
+    display: none !important;
+  }
+}
+.ivu-checkbox {
+  margin-right: 5px;
+}
+
+.ivu-table {
+  th {
+    text-align: center;
+  }
+}
+
+.ivu-table-cell {
+  text-align: center;
+}
