@@ -19,7 +19,7 @@
     "lt-router": "0.0.1",
     "lt-utils": "0.0.1",
     "lt-xhr": "0.0.1",
-    "tinymce": "^4.7.13",
+    "tinymce": "^4.9.10",
     "vuedraggable": "^2.20.0"
   }
 }
