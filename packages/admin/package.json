@@ -13,7 +13,7 @@
     "element-ui": "^2.7.2",
     "image-compressor.js": "^1.1.4",
     "iview": "^3.3.3",
-    "jszip": "^3.2.1",
+    "jszip": "^3.7.0",
     "lt-component": "0.0.1",
     "lt-i18n": "0.0.1",
     "lt-router": "0.0.1",
